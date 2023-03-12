@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".SignUp">
+
+    <EditText
+        android:id="@+id/etusername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="ユーザーネーム"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv2" />
+
+    <EditText
+        android:id="@+id/etemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="メールアドレス"
+        android:inputType="textEmailSubject"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etusername" />
+
+    <EditText
+        android:id="@+id/etpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="パスワード"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etemail" />
+
+    <Button
+        android:id="@+id/btregister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_customize"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etpass" />
+
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="SignUp"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tx1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="既に登録済みの方は"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/tx2"
+        app:layout_constraintTop_toBottomOf="@+id/btregister" />
+
+    <TextView
+        android:id="@+id/tx2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:text="コチラ"
+        android:textColor="@color/teal_700"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btregister" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/firstusericon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

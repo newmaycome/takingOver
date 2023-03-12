@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "188208241917",
+    "project_id": "asazna-244e8",
+    "storage_bucket": "asazna-244e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:188208241917:android:90598af4118cfd8d06b294",
+        "android_client_info": {
+          "package_name": "com.example.asazna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "188208241917-a06an7hejs5b8asbqsjrh120pl31d3de.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8mlxYA4UYfDkZurYCB9DUaIpHMA1vel0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "188208241917-a06an7hejs5b8asbqsjrh120pl31d3de.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "188208241917-akk9cu6buc6cnuus6kqr8db73stliiat.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.asazna.Asazna"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

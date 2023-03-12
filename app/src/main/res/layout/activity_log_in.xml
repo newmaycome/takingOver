@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".LogIn">
+
+
+    <EditText
+        android:id="@+id/etpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="パスワード"
+        android:inputType="textPassword"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/btlogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etemail" />
+
+    <Button
+        android:id="@+id/btlogin"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/btn_customize"
+        android:text="Entry"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etpass" />
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="LogIn"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/etemail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:ems="10"
+        android:hint="メールアドレス"
+        android:inputType="textEmailSubject"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/etpass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login" />
+
+    <TextView
+        android:id="@+id/tx1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="新規会員登録は"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/tx2"
+        app:layout_constraintTop_toBottomOf="@+id/btlogin" />
+
+    <TextView
+        android:id="@+id/tx2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:text="コチラ"
+        android:textColor="@color/teal_700"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btlogin" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

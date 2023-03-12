@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <fragment
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map_frag"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".GoogleMAps" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:menu="@menu/navi_menu"
+        app:headerLayout="@layout/navi_header"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        />
+
+</androidx.drawerlayout.widget.DrawerLayout>

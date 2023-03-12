@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/arrawback"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+        <ImageView
+            android:id="@+id/userimage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/txpostNum"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/arrawback"
+            app:srcCompat="@drawable/ic_userimage" />
+
+        <TextView
+            android:id="@+id/txpost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:text="投稿"
+            app:layout_constraintEnd_toStartOf="@+id/txfollow"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txfollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:text="フォロー"
+            app:layout_constraintEnd_toStartOf="@+id/txfollower"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txfollower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="フォロワー"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txfollowerNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="42dp"
+            android:text="0"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txfollower" />
+
+        <TextView
+            android:id="@+id/txfollowNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="72dp"
+            android:text="0"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/txfollowerNum"
+            app:layout_constraintTop_toBottomOf="@+id/txfollow" />
+
+        <TextView
+            android:id="@+id/txpostNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="56dp"
+            android:text="0"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/txfollowNum"
+            app:layout_constraintTop_toBottomOf="@+id/txpost" />
+
+        <TextView
+            android:id="@+id/txname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:text="name"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userimage" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="200dp"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/userimage"
+            app:layout_constraintTop_toBottomOf="@+id/txpostNum"
+            app:layout_constraintVertical_bias="0.437" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/postlayout"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fbtNewPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:clickable="true"
+        android:backgroundTint="@color/teal_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

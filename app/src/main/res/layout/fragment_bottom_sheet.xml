@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/blayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottomsheetbackground"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomsheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bottomsheetbackground"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+
+        <ImageView
+            android:id="@+id/bottombar"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:src="@drawable/baseline_remove_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/etspotname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="spotname"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toStartOf="@+id/spotnameedit"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bottombar" />
+
+        <HorizontalScrollView
+            android:id="@+id/piclayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etspotname">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/spotimage"
+                    android:layout_width="139dp"
+                    android:layout_height="212dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etspotname"
+                    app:srcCompat="@drawable/addpicture" />
+
+                <ImageView
+                    android:id="@+id/spotimage2"
+                    android:layout_width="139dp"
+                    android:layout_height="212dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintStart_toEndOf="@+id/spotimage1"
+                    app:layout_constraintTop_toBottomOf="@+id/etspotname"
+                    app:srcCompat="@drawable/addpicture" />
+
+                <ImageView
+                    android:id="@+id/spotimage1"
+                    android:layout_width="139dp"
+                    android:layout_height="212dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintStart_toEndOf="@+id/spotimage"
+                    app:layout_constraintTop_toBottomOf="@+id/etspotname"
+                    app:srcCompat="@drawable/addpicture" />
+
+                <ImageView
+                    android:id="@+id/spotimage3"
+                    android:layout_width="139dp"
+                    android:layout_height="212dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintStart_toEndOf="@+id/spotimage2"
+                    app:layout_constraintTop_toBottomOf="@+id/etspotname"
+                    app:srcCompat="@drawable/addpicture" />
+
+                <ImageView
+                    android:id="@+id/spotimage4"
+                    android:layout_width="139dp"
+                    android:layout_height="212dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintStart_toEndOf="@+id/spotimage3"
+                    app:layout_constraintTop_toBottomOf="@+id/etspotname"
+                    app:srcCompat="@drawable/addpicture" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/spotlocation"
+            android:layout_width="250dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="50dp"
+            android:text="adress"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@id/piclayout" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="40dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/spotlocation"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/piclayout"
+            app:srcCompat="@drawable/marker" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="230dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="16dp"
+            android:text="No infomation"
+            app:layout_constraintEnd_toStartOf="@+id/infoedit"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/spotlocation" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="40dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/textView"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5"
+            app:srcCompat="@drawable/baseline_info_24" />
+
+        <TextView
+            android:id="@+id/EditUser"
+            android:layout_width="195dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="24dp"
+            android:text="edittername"
+            app:layout_constraintEnd_toStartOf="@+id/button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/edituserimage"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <ImageView
+            android:id="@+id/edituserimage"
+            android:layout_width="43dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/EditUser"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:srcCompat="@drawable/baseline_account_box_24" />
+
+        <TextView
+            android:id="@+id/editTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:text="編集"
+            android:textColor="@color/teal_700"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/bottombar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/spotnameedit"
+            android:layout_width="35dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/etspotname"
+            app:layout_constraintTop_toBottomOf="@+id/bottombar"
+            app:srcCompat="@drawable/baseline_edit_24" />
+
+        <ImageView
+            android:id="@+id/infoedit"
+            android:layout_width="35dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/spotlocation"
+            app:srcCompat="@drawable/baseline_edit_24" />
+
+        <ToggleButton
+            android:id="@+id/button"
+            android:layout_width="79dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/togglebutton"
+            android:textColor="@color/white"
+            android:textOff="フォローする"
+            android:textOn="フォロー中"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/EditUser"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <Button
+            android:id="@+id/btprivate"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/btn_customize"
+            android:text="更新して保存"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/btpublic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EditUser" />
+
+        <Button
+            android:id="@+id/btpublic"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/btn_follow"
+            android:text="公開"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EditUser" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@color/teal_200">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileimage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/firstusericon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profiletext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/profileimage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/follow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:text="フォロー"
+        android:textColor="#9A575252"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profiletext" />
+
+    <TextView
+        android:id="@+id/follownumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/follow"
+        app:layout_constraintTop_toBottomOf="@+id/profiletext" />
+
+    <TextView
+        android:id="@+id/follower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:text="フォロワー"
+        android:textColor="#9A575252"
+        app:layout_constraintStart_toEndOf="@+id/follownumber"
+        app:layout_constraintTop_toBottomOf="@+id/profiletext" />
+
+    <TextView
+        android:id="@+id/followernumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/follower"
+        app:layout_constraintTop_toBottomOf="@+id/profiletext" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
